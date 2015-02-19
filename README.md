@@ -32,7 +32,7 @@ All the available classes are very basic:
  - `border-<style>`<br>
   Applies a `border-style:<style>` to the element
 
-# Examples:
+## Examples:
 
 Examples of usage:
 
@@ -48,7 +48,7 @@ With `'force'=>false`:
     
 But the output is always the same.
 
-For basic styles, it may be too much boilerplate code:
+For basic styles, it may be too much code:
 
     <p class="blue-border border-2px border-dotted">too much for a simple border!</p>
 
@@ -56,11 +56,11 @@ As a regular `style`:
 
     <p style="border:2px dotted blue;">way smaller, less semantic!</p>
 
-As a regular `style`, with `!important` (Don't try this at home!):
+A regular `style`, with `!important` (Don't try this at home!):
 
     <p style="border:2px dotted blue!important;">way smaller, still less semantic!</p>
 
-# Costumization
+## Costumization
 
 What good for is a plataform where you can't costumize?
 
@@ -84,3 +84,12 @@ You use it to change every aspect of the code.
    Defines if it is to send the sizes for text and borders. (Default: `true`)
  - `'styles'`<br>
    Defines if it is to send the styles for text and borders. (Default: `true`)
+
+## Todo:
+
+ - Allow for external loading of definitions (by making a file with the same name and replacing the `$config` variable)
+ - Add more colors
+ - Allow for custom colors
+ - Add more styles
+ - Add sizes for shadows
+ - Add sizes and styles for outlines
