@@ -1,7 +1,5 @@
 <?php
-	
-	header('Content-type: text/css');
-	
+
 	if( @is_file($file = basename(__FILE__, '.css.php') . '-config.php' ) )
 	{
 		$config = (array)include( $file );
@@ -17,9 +15,15 @@
 			'back'=>true,
 			'shadow'=>true,
 			'sizes'=>true,
-			'styles'=>true
+			'styles'=>true,
+			'send_header'=>true
 		);
 	
+	}
+	
+	if( isset( $config['send_header'] ) && $config['send_header'] && !headers_sent() )
+	{
+		header('Content-type: text/css');
 	}
 	
 	$colors = array(
