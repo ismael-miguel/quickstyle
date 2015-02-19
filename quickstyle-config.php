@@ -8,5 +8,6 @@
 		'back'=>true,
 		'shadow'=>true,
 		'sizes'=>true,
-		'styles'=>true
+		'styles'=>true,
+		'custom'=>array()
 	);
