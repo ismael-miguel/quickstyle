@@ -1,4 +1,4 @@
-# Quickstyle
+# Quickstyle				[![Build Status](https://travis-ci.org/ismael-miguel/quickstyle.svg?branch=master)] (https://travis-ci.org/ismael-miguel/quickstyle)
 Provides a way to generate quick styles to style your elements.
 
 **Usage:**
