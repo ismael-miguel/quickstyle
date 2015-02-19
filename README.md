@@ -68,3 +68,19 @@ On top, you have a variable called `$config`.
 
 You use it to change every aspect of the code.
 
+ - `'class'`<br>
+   Must be a string or `null`. This is the class that must be used for colors. (Default: `'color'`)
+ - `'force'`<br>
+   Forces the styles, by applying `!important`. Disable this if you don't need and to save space. (Default: `true`)
+ - `'text'`<br>
+   Defines if it is to send the styles and colors to apply to texts. (Default: `true`)
+ - `'border'`<br>
+   Defines if it is to send the styles and colors to apply to borders. (Default: `true`)
+ - `'back'`<br>
+   Defines if it is to send the background colors. (Default: `true`)
+ - `'shadow'`<br>
+   Defines if it is to send the shadow colors. (Default: `true`)
+ - `'sizes'`<br>
+   Defines if it is to send the sizes for text and borders. (Default: `true`)
+ - `'styles'`<br>
+   Defines if it is to send the styles for text and borders. (Default: `true`)
