@@ -10,4 +10,4 @@ php:
   - 5.6
   - hhvm
   
-script: phpunit --no-configuration --coverage-text "quickstyle.css"
+script: phpunit --no-configuration --coverage-text "" "quickstyle.css.php"
