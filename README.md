@@ -96,4 +96,5 @@ You use it to change every aspect of the code.
  - Add more styles
  - Add sizes for shadows
  - Add sizes and styles for outlines
- - Add a definition to send as a `.css` or without the `Content-type: text/css` 
+ - <del>Add a definition to send as a `.css` or without the `Content-type: text/css`</del><br>
+   Now this definition is possible and is described on the documentation above, where you set the key `'send_header'`.
