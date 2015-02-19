@@ -10,4 +10,4 @@ php:
   - 5.6
   - hhvm
   
-script: phpunit --ignore-configuration --coverage-text
+script: phpunit --no-configuration --coverage-text
