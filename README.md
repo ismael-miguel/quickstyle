@@ -84,6 +84,8 @@ You use it to change every aspect of the code.
    Defines if it is to send the sizes for text and borders. (Default: `true`)
  - `'styles'`<br>
    Defines if it is to send the styles for text and borders. (Default: `true`)
+ - `'send_header'`<br>
+   Defines if it is to send the header `Content-type: text/css`. (Default: `true`)
 
 ## Todo:
 
