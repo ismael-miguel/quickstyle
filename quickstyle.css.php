@@ -2,7 +2,7 @@
 	
 	header('Content-type: text/css');
 	
-	if( @is_file($file = basename(__FILE__, '.php') . '-config.php' ) )
+	if( @is_file($file = basename(__FILE__, '.css.php') . '-config.php' ) )
 	{
 		$config = (array)include( $file );
 	}
