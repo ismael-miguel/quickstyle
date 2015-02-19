@@ -9,5 +9,6 @@
 		'shadow'=>true,
 		'sizes'=>true,
 		'styles'=>true,
+		'send_header'=>true,
 		'custom'=>array()
 	);
