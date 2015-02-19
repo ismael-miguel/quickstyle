@@ -2,16 +2,25 @@
 	
 	header('Content-type: text/css');
 	
-	$config = array(
-		'class'=>'color',
-		'force'=>true,
-		'text'=>true,
-		'border'=>true,
-		'back'=>true,
-		'shadow'=>true,
-		'sizes'=>true,
-		'styles'=>true
-	);
+	if( @is_file($file = basename(__FILE__, '.php') . '-config.php' ) )
+	{
+		$config = (array)include( $file );
+	}
+	else
+	{
+	
+		$config = array(
+			'class'=>'color',
+			'force'=>true,
+			'text'=>true,
+			'border'=>true,
+			'back'=>true,
+			'shadow'=>true,
+			'sizes'=>true,
+			'styles'=>true
+		);
+	
+	}
 	
 	$colors = array(
 		'black'=>'000000',
