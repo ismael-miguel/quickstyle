@@ -87,7 +87,8 @@ You use it to change every aspect of the code.
 
 ## Todo:
 
- - Allow for external loading of definitions (by making a file with the same name and replacing the `$config` variable)
+ - <del>Allow for external loading of definitions (by making a file with the same name and replacing the `$config` variable)</del><br>
+   Now it is possible, by following the example of the file `quickstyle-config.php`.
  - Add more colors
  - Allow for custom colors
  - Add more styles
