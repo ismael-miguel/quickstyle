@@ -1,13 +1,13 @@
 # Quickstyle				![Build Status](https://travis-ci.org/ismael-miguel/quickstyle.svg?branch=master)
 Provides a way to generate quick styles to style your elements.
 
-**Usage:**
+## Usage:
 
 Simply use a regular `<link>` tag:
 
     <link href="/path/to/quickstyle.css.php" rel="stylesheet" type="text/css">
 
-**Classes:**
+## Classes:
 
 All the available classes are very basic:
 
@@ -64,7 +64,10 @@ A regular `style`, with `!important` (Don't try this at home!):
 
 What good for is a plataform where you can't costumize?
 
-On top, you have a variable called `$config`.
+You can create a file with the name `<your php file name>-config.php` (e.g.: quickstyle-config.php).<br>
+The name of this file is required to have the extension `.css.php` or it won't include.
+
+Inside the file, simply return an array with the following keys (the default values are all used only when no file is found):
 
 You use it to change every aspect of the code.
 
@@ -86,6 +89,10 @@ You use it to change every aspect of the code.
    Defines if it is to send the styles for text and borders. (Default: `true`)
  - `'send_header'`<br>
    Defines if it is to send the header `Content-type: text/css`. (Default: `true`)
+ - `'custom_colors'`<br>
+   Defines new colors. To avoid problems, these will have the name `<class>-custom-<color>`. (Default: `null`)<br>
+   For this to work, provide the color name as the key and the value as the hexadecial representation without `#`.<br>
+   E.g.: `array('gold'=>'CFB53B')` (will roduce, for example, `.color-custom-gold{color:#CFB53B!important;}`)
 
 ## Todo:
 
