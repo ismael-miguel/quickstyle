@@ -27,26 +27,10 @@
 	}
 	
 	$colors = array(
-		'black'=>'000000',
-		'red'=>array('FF0000','dark'=>'8B0000'),
-		'green'=>array(
-			0=>'00FF00',
-			'dark'=>'006400',
-			'light'=>'90EE90',
-			'forest'=>'228B22',
-			'yellow'=>'ADFF2F',
-			'lawn'=>'7CFC00',
-			'lime'=>'32CD32',
-			'pale'=>'98FB98',
-			'oliver-dark'=>'556B2F',
-			'sea'=>'2E8B57',
-			'sea-dark'=>'8FBC8F',
-			'sea-light'=>'8FBC8F',
-			'sea-medium'=>'3CB371',
-			'spring'=>'00FF7F',
-			'spring-medium'=>'00FA9A'
-		),
-		'white'=>'FFFFFF'
+		'black',
+		'red'=>array('dark'),
+		'green'=>array('dark','light','forest','yellow','lawn','lime','pale','darkolive','sea','darksea','lightsea','mediumsea','spring','mediumspring'),
+		'white'
 	);
 	
 	$sizes=array(
@@ -69,34 +53,32 @@
 	{
 		if(is_array($color))
 		{
-			foreach($color as $sub_color_name=>$sub_color)
-			{
-				$sub_color_name = $sub_color_name=='0' ? $color_name : $color_name . '-' . $sub_color_name;
-				
+			foreach($color as $sub_color)
+			{				
 				if( isset($config['text']) && $config['text'] )
 				{
-					echo $class, '.', $sub_color_name, '-text{color:#', $sub_color, $important, ';}';
+					echo $class, '.', $color_name, '-', $sub_color, '-text{color:', $sub_color, $color_name, $important, ';}';
 				}
 				
 				if( isset($config['border']) && $config['border'] )
 				{
-					echo $class, '.', $sub_color_name, '-border{border-color:#', $sub_color, $important, ';}';
+					echo $class, '.', $color_name, '-', $sub_color, '-border{border-color:', $sub_color, $color_name, $important, ';}';
 				}
 				
 				if( isset($config['back']) && $config['back'] )
 				{
-					echo $class, '.', $sub_color_name, '-back{background-color:#', $sub_color, $important, ';}';
-					echo $class, '.', $sub_color_name, '-background{background-color:#', $sub_color, $important, ';}';
+					echo $class, '.', $color_name, '-', $sub_color, '-back{background-color:', $sub_color, $color_name, $important, ';}';
+					echo $class, '.', $color_name, '-', $sub_color, '-background{background-color:', $sub_color, $color_name, $important, ';}';
 				}
 				
 				if( isset($config['shadow']) && $config['shadow'] )
 				{
-					echo $class, '.', $sub_color_name, '-shadow{text-shadow-color:#', $sub_color, $important, ';box-shadow-color:#', $sub_color, $important, ';}';
+					echo $class, '.', $color_name, '-', $sub_color, '-shadow{text-shadow-color:', $sub_color, $color_name, $important, ';box-shadow-color:', $sub_color, $important, ';}';
 				}
 				
 				if( isset($config['outline']) && $config['outline'] )
 				{
-					echo $class, '.', $sub_color_name, '-outline{outline-color:#', $sub_color, $important, ';}';
+					echo $class, '.', $color_name, '-', $sub_color, '-outline{outline-color:', $sub_color, $color_name, $important, ';}';
 				}
 			}
 		}
@@ -105,28 +87,28 @@
 			
 			if( isset($config['text']) && $config['text'] )
 			{
-				echo $class, '.', $color_name, '-text{color:#', $color, $important, ';}';
+				echo $class, '.', $color, '-text{color:', $color, $important, ';}';
 			}
 			
 			if( isset($config['border']) && $config['border'] )
 			{
-				echo $class, '.', $color_name, '-border{border-color:#', $color, $important, ';}';
+				echo $class, '.', $color, '-border{border-color:', $color, $important, ';}';
 			}
 			
 			if( isset($config['back']) && $config['back'] )
 			{
-				echo $class, '.', $color_name, '-back{background-color:#', $color, $important, ';}';
-				echo $class, '.', $color_name, '-background{background-color:#', $color, $important, ';}';
+				echo $class, '.', $color, '-back{background-color:', $color, $important, ';}';
+				echo $class, '.', $color, '-background{background-color:', $color, $important, ';}';
 			}
 			
 			if( isset($config['shadow']) && $config['shadow'] )
 			{
-				echo $class, '.', $color_name, '-shadow{text-shadow-color:#', $color, $important, ';box-shadow-color:#', $color, $important, ';}';
+				echo $class, '.', $color, '-shadow{text-shadow-color:', $color, $important, ';box-shadow-color:', $color, $important, ';}';
 			}
 			
 			if( isset($config['outline']) && $config['outline'] )
 			{
-				echo $class, '.', $color_name, '-outline{outline-color:#', $color, $important, ';}';
+				echo $class, '.', $color, '-outline{outline-color:', $color, $important, ';}';
 			}
 		}
 	}
