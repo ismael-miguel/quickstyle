@@ -91,17 +91,18 @@ You use it to change every aspect of the code.
    Defines if it is to send the styles for text and borders. (Default: `true`)
  - `'send_header'`<br>
    Defines if it is to send the header `Content-type: text/css`. (Default: `true`)
- - `'custom_colors'`<br>
-   Defines new colors. To avoid problems, these will have the name `<class>-custom-<color>`. (Default: `null`)<br>
+ - `'custom'`<br>
+   Defines new colors. To avoid problems, these will have the name `<class>.custom-<color>`. (Default: `null`)<br>
    For this to work, provide the color name as the key and the value as the hexadecial representation without `#`.<br>
-   E.g.: `array('gold'=>'CFB53B')` (will roduce, for example, `.color-custom-gold{color:#CFB53B!important;}`)
+   E.g.: `array('gold'=>'CFB53B')` (will produce, for example, `.color.custom-gold-<style>{color:#CFB53B!important;}`)
 
 ## Todo:
 
  - <del>Allow for external loading of definitions (by making a file with the same name and replacing the `$config` variable)</del><br>
    Now it is possible, by following the example of the file `quickstyle-config.php`.
  - Add more colors
- - Allow for custom colors
+ - <del>Allow for custom colors</del><br>
+   Now you can add custom colors!
  - Add more styles
  - Add sizes for shadows
  - Add sizes and styles for outlines
