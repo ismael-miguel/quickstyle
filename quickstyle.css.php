@@ -114,7 +114,7 @@
 			}
 		}
 	}
-	unset($color,$color_name,$sub_color,$sub_color_name);
+	unset($colors,$color,$color_name,$sub_color,$sub_color_name);
 	
 	if( isset($config['custom']) )
 	{
@@ -122,31 +122,32 @@
 		{
 			if( isset($config['text']) && $config['text'] )
 			{
-				echo $class, '.custom-', $color, '-text{color:', $color, $important, ';}';
+				echo $class, '.custom-', $color, '-text{color:#', $hex, $important, ';}';
 			}
 			
 			if( isset($config['border']) && $config['border'] )
 			{
-				echo $class, '.custom-', $color, '-border{border-color:', $color, $important, ';}';
+				echo $class, '.custom-', $color, '-border{border-color:#', $hex, $important, ';}';
 			}
 			
 			if( isset($config['back']) && $config['back'] )
 			{
-				echo $class, '.custom-', $color, '-back{background-color:', $color, $important, ';}';
-				echo $class, '.custom-', $color, '-background{background-color:', $color, $important, ';}';
+				echo $class, '.custom-', $color, '-back{background-color:#', $hex, $important, ';}';
+				echo $class, '.custom-', $color, '-background{background-color:#', $hex, $important, ';}';
 			}
 			
 			if( isset($config['shadow']) && $config['shadow'] )
 			{
-				echo $class, '.custom-', $color, '-shadow{text-shadow-color:', $color, $important, ';box-shadow-color:', $color, $important, ';}';
+				echo $class, '.custom-', $color, '-shadow{text-shadow-color:#', $hex, $important, ';box-shadow-color:#', $hex, $important, ';}';
 			}
 			
 			if( isset($config['outline']) && $config['outline'] )
 			{
-				echo $class, '.custom-', $color, '-outline{outline-color:', $color, $important, ';}';
+				echo $class, '.custom-', $color, '-outline{outline-color:#', $hex, $important, ';}';
 			}
 		}
 	}
+	unset($color,$hex);
 	
 	if( isset($config['sizes']) && $config['sizes'])
 	{
@@ -165,7 +166,7 @@
 			}
 		}
 	}
-	unset($size_name,$size_list,$size_value);
+	unset($sizes,$size_name,$size_list,$size_value);
 	
 	if( isset($config['styles']) && $config['styles'])
 	{
@@ -184,4 +185,5 @@
 			}
 		}
 	}
-	unset($style);
+	
+	unset($styles,$style,$config,$important,$class);
