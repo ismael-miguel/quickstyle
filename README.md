@@ -7,7 +7,7 @@ Simply use a regular `<link>` tag:
 
     <link href="/path/to/quickstyle.css.php" rel="stylesheet" type="text/css">
 
-You can test the output on [https://ideone.com/kxuOLW](https://ideone.com/kxuOLW)
+You can test the output on [https://ideone.com/yn8jBJ](https://ideone.com/yn8jBJ)
 
 ## Classes:
 
